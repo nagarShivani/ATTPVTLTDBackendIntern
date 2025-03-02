@@ -1,20 +1,18 @@
-const express = require('express');
-const employees = require('./employees'); 
-
+const express = require("express");
 const app = express();
-const PORT = 8000;
+require("dotenv").config();
+const port = process.env.PORT
+require("./db/dbConnection");
+const Router = require('./routes/route');
+
+app.use("/api/",Router);
 
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the Employee API. Use /employees to get the employee list.');
-});
 
 
-app.get('/employees', (req, res) => {
-  res.json(employees);
-});
 
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+
+app.listen(port,()=>{
+    console.log("server is running on port 1998");
+})
