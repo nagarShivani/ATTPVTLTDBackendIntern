@@ -15,8 +15,8 @@ This project is a **Node.js + Express API** that manages employee and patient re
     - GET	/employees	-> Retrieve all employees
 - Patient API
     - GET	/patients ->	Retrieve all patients
-    - GET		/patients?disease=Cold ->	Retrieve patients suffering from Cold (Query)
-    - GET	/patients/disease/Flu ->	Retrieve patients suffering from Flu (Param)
+    - GET		/patient?disease=Cold ->	Retrieve patients suffering from Cold (Query)
+    - GET	/patient/disease/Flu ->	Retrieve patients suffering from Flu (Param)
 ---
 
 ## 🚀 Getting Started
